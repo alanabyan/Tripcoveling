@@ -161,19 +161,13 @@ export default function Footer() {
               Home
             </Link>
             <Link
-              href={"/"}
-              className="text-sm text-slate-300 hover:text-white"
-            >
-              About us
-            </Link>
-            <Link
-              href={"/"}
+              href={"/destination"}
               className="text-sm text-slate-300 hover:text-white"
             >
               Destination
             </Link>
             <Link
-              href={"/"}
+              href={"/blog"}
               className="text-sm text-slate-300 hover:text-white"
             >
               Blog
@@ -237,7 +231,7 @@ export default function Footer() {
             www.tripcoveling.com
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-x-5 gap-y-2 text-slate-400 order-2 lg:order-3">
-            <Link href="#" className="hover:text-white text-sm">
+            <Link href="/contact" className="hover:text-white text-sm">
               Contact
             </Link>
             <Link href="#" className="hover:text-white text-sm">

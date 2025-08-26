@@ -50,24 +50,19 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href={"/"} className="hover:text-[#137BC3]">
-                About
-              </Link>
-            </li>
-            <li>
               <Link href={"/destination"} className="hover:text-[#137BC3]">
                 Destination
               </Link>
             </li>
             <li>
-              <Link href={"/"} className="hover:text-[#137BC3]">
+              <Link href={"/blog"} className="hover:text-[#137BC3]">
                 Blog
               </Link>
             </li>
           </ul>
-          <button className="bg-[#137BC3] text-white font-semibold text-lg px-8 py-3 rounded-xl hover:bg-blue-700 transition-colors">
+          <Link href={"/contact"} className="bg-[#137BC3] text-white font-semibold text-lg px-8 py-3 rounded-xl hover:bg-blue-700 transition-colors">
             Contact Us
-          </button>
+          </Link>
         </div>
 
         {/* === Tombol Hamburger (Hanya tampil di layar kecil) === */}
@@ -128,26 +123,19 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href={"/"} onClick={() => setIsOpen(false)}>
-              About
-            </Link>
-          </li>
-          <li>
             <Link href={"/destination"} onClick={() => setIsOpen(false)}>
               Destination
             </Link>
           </li>
           <li>
-            <Link href={"/"} onClick={() => setIsOpen(false)}>
+            <Link href={"/blog"} onClick={() => setIsOpen(false)}>
               Blog
             </Link>
           </li>
         </ul>
-        <div className="pb-8 px-6">
-          <button className="bg-[#137BC3] text-white font-semibold text-lg w-full py-3 rounded-xl">
+          <Link href={"/contact"} className="bg-[#137BC3] text-white font-semibold text-lg w-full py-3 rounded-xl">
             Contact Us
-          </button>
-        </div>
+          </Link>
       </div>
     </nav>
   );
