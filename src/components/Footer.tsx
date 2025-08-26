@@ -125,88 +125,130 @@ const YoutubeIcon = () => (
   </svg>
 );
 
+
 export default function Footer() {
   return (
-    <div className="px-[7.5rem] py-[4.5rem] bg-[#040A2C] text-white">
-      <div className="flex items-center gap-x-10">
-        <div className="flex flex-col gap-y-5 w-1/3">
-          <h1 className="font-semibold text-4xl">
-            <span className="text-[#137BC3]">Trip</span>coveling
-          </h1>
-          <p className="text-sm">
-            Lorem ipsum dolor sit amet consectetur. Tristique semper imperdiet
-            dolor augue tristique sed aliquam in.
-          </p>
-          <div className="flex items-center gap-x-2.5">
-            <Locationicon />
-            <p className="font-medium text-lg">
-              Jl. Raya Jakarta no.40 - Indonesia
+    // Padding diubah menjadi responsif
+    <footer className="bg-[#040A2C] text-white">
+      <div className="container mx-auto px-6 py-16 md:py-20">
+        {/* === BAGIAN ATAS: Logo, Links, Gallery === */}
+        {/* Dibuat vertikal di mobile (flex-col) dan horizontal di tablet ke atas (md:flex-row) */}
+        <div className="flex flex-col md:flex-row items-start justify-between gap-12 text-center md:text-left">
+          {/* Kolom 1: Logo & Info */}
+          <div className="flex flex-col items-center md:items-start gap-y-5 w-full md:w-4/12">
+            <h1 className="font-semibold text-4xl">
+              <span className="text-[#137BC3]">Trip</span>coveling
+            </h1>
+            <p className="text-sm text-slate-300">
+              Jelajahi dunia tanpa batas. Kami menyediakan pengalaman perjalanan
+              terbaik yang dirancang khusus untuk Anda.
             </p>
+            <div className="flex items-center gap-x-2.5">
+              <Locationicon />
+              <p className="font-medium text-lg">
+                Jl. Raya Jakarta no.40 - Indonesia
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="w-1/3 flex flex-col items-center ">
-          <div className="flex flex-col items-start gap-y-2.5">
-            <h1 className="font-semibold text-xl">Quick Links</h1>
-            <Link href={"/"} className="text-sm">
+
+          {/* Kolom 2: Quick Links */}
+          <div className="w-full md:w-auto flex flex-col items-center md:items-start gap-y-2.5">
+            <h2 className="font-semibold text-xl mb-2">Quick Links</h2>
+            <Link
+              href={"/"}
+              className="text-sm text-slate-300 hover:text-white"
+            >
               Home
             </Link>
-            <Link href={"/"} className="text-sm">
+            <Link
+              href={"/"}
+              className="text-sm text-slate-300 hover:text-white"
+            >
               About us
             </Link>
-            <Link href={"/"} className="text-sm">
+            <Link
+              href={"/"}
+              className="text-sm text-slate-300 hover:text-white"
+            >
               Destination
             </Link>
-            <Link href={"/"} className="text-sm">
+            <Link
+              href={"/"}
+              className="text-sm text-slate-300 hover:text-white"
+            >
               Blog
             </Link>
           </div>
+
+          {/* Kolom 3: Gallery */}
+          <div className="w-full md:w-4/12 flex flex-col items-center md:items-start gap-y-2.5">
+            <h2 className="font-semibold text-xl mb-2">Gallery</h2>
+            <Image
+              src={"/assets/images/combo.svg"}
+              width={450}
+              height={100}
+              alt="gallery"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
-        <div className="flex flex-col gap-y-2.5">
-          <h1 className="font-semibold text-xl">Gallery</h1>
-          <Image
-            src={"/assets/images/combo.svg"}
-            width={450}
-            height={100}
-            alt="galery"
-          />
-        </div>
-      </div>
-      <div className="flex justify-between mt-24">
-        <div className="flex items-center gap-x-12">
-          <div className="flex flex-col gap-y-2.5">
-            <h1 className="font-semibold text-xl">Book your holiday</h1>
-            <div className="flex items-center text-lg font-medium gap-x-2.5">
-              <PhoneIcon />
-              <p>012-564-726-283</p>
+
+        {/* === BAGIAN TENGAH: Kontak & Social Media === */}
+        {/* Dibuat vertikal di mobile dan horizontal di tablet ke atas */}
+        <div className="flex flex-col md:flex-row justify-between items-start mt-16 md:mt-24 gap-12 text-center md:text-left">
+          {/* Kontak (Telepon & Email) */}
+          <div className="w-full md:w-auto flex flex-col sm:flex-row items-center sm:items-start gap-8 sm:gap-12 mx-auto md:mx-0">
+            <div className="flex flex-col gap-y-2.5 items-center sm:items-start">
+              <h3 className="font-semibold text-xl">Book your holiday</h3>
+              <div className="flex items-center text-lg font-medium gap-x-2.5">
+                <PhoneIcon />
+                <p>012-564-726-283</p>
+              </div>
+            </div>
+            <div className="flex flex-col gap-y-2.5 items-center sm:items-start">
+              <h3 className="font-semibold text-xl">Email us</h3>
+              <div className="flex items-center text-lg font-medium gap-x-2.5">
+                <GmailIcon />
+                <p>tripcoveling@gmail.com</p>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col gap-y-2.5">
-            <h1 className="font-semibold text-xl">Email us</h1>
-            <div className="flex items-center text-lg font-medium gap-x-2.5">
-              <GmailIcon />
-              <p>tripcoveling@gmail.com</p>
+
+          {/* Follow Us */}
+          <div className="w-full md:w-auto flex flex-col items-center md:items-start gap-y-2.5 mx-auto md:mx-0">
+            <h3 className="font-semibold text-xl">Follow Us</h3>
+            <div className="flex items-center gap-x-2.5">
+              <FacebookIcon />
+              <InstagramIcon />
+              <YoutubeIcon />
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-y-2.5">
-          <h1>Follow Us</h1>
-          <div className="flex items-center gap-x-2.5">
-            <FacebookIcon />
-            <InstagramIcon />
-            <YoutubeIcon />
+
+        <hr className="bg-slate-700 border-none h-px my-9" />
+
+        {/* === BAGIAN BAWAH: Copyright === */}
+        {/* Dibuat vertikal di mobile dan horizontal di desktop */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
+          <p className="text-base text-slate-400 order-3 lg:order-1">
+            Copyright &copy; {new Date().getFullYear()} Built by PangrangoDevs
+          </p>
+          <p className="font-semibold text-lg order-1 lg:order-2">
+            www.tripcoveling.com
+          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-x-5 gap-y-2 text-slate-400 order-2 lg:order-3">
+            <Link href="#" className="hover:text-white text-sm">
+              Contact
+            </Link>
+            <Link href="#" className="hover:text-white text-sm">
+              Privacy Policy
+            </Link>
+            <Link href="#" className="hover:text-white text-sm">
+              Terms & Conditions
+            </Link>
           </div>
         </div>
       </div>
-      <hr className="bg-white h-0.5 my-9" />
-      <div className="flex items-center justify-between">
-        <p className="text-lg">Copyright &copy; Built by PangrangoDevs </p>
-        <p className="font-semibold text-lg">www.tripcoveling.com</p>
-        <div className="flex items-center gap-x-5">
-            <p>Contact</p>
-            <p>Privacy Policy</p>
-            <p>Terms & Conditions</p>
-        </div>
-      </div>
-    </div>
+    </footer>
   );
 }

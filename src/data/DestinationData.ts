@@ -4,6 +4,7 @@ type Destination = {
   title: string;
   location: string;
   price: string;
+  href: string;
 };
 
 export const popularDestinations: Destination[] = [
@@ -13,6 +14,7 @@ export const popularDestinations: Destination[] = [
     title: "Gunung Bromo",
     location: "Jawa Timur, Indonesia",
     price: "3jt/malam",
+    href: "/destination/bromo",
   },
   {
     id: 2,
@@ -20,6 +22,7 @@ export const popularDestinations: Destination[] = [
     title: "Kepulauan Seribu",
     location: "Jakarta, Indonesia",
     price: "2jt/malam",
+    href: "/destination/pulau-seribu",
   },
   {
     id: 3,
@@ -27,5 +30,6 @@ export const popularDestinations: Destination[] = [
     title: "Raja Ampat",
     location: "Raja Ampat, Papua",
     price: "1.5jt/malam",
+    href: "/destination/raja-ampat",
   },
 ];

@@ -1,5 +1,6 @@
 "use client"; // Komponen ini interaktif, jadi kita gunakan "use client"
 
+import Link from "next/link";
 import { useState } from "react";
 
 // Data untuk kategori, bisa Anda sesuaikan atau ambil dari API
@@ -40,9 +41,9 @@ export default function CategoryFilter() {
           </div>
 
           <div className="w-full md:w-auto flex-shrink-0">
-            <button className="bg-[#137BC3] text-white font-semibold w-full md:w-auto px-8 py-3 rounded-xl hover:bg-blue-700 transition-colors">
+            <Link href={"/destination"} className="bg-[#137BC3] text-white font-semibold w-full md:w-auto px-8 py-3 rounded-xl hover:bg-blue-700 transition-colors">
               Lihat destinasi lainnya
-            </button>
+            </Link>
           </div>
         </div>
       </div>

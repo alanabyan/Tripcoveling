@@ -55,7 +55,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href={"/"} className="hover:text-[#137BC3]">
+              <Link href={"/destination"} className="hover:text-[#137BC3]">
                 Destination
               </Link>
             </li>
@@ -133,7 +133,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href={"/"} onClick={() => setIsOpen(false)}>
+            <Link href={"/destination"} onClick={() => setIsOpen(false)}>
               Destination
             </Link>
           </li>
